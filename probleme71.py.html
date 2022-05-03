@@ -1,0 +1,30 @@
+<html><head>
+<title>probleme71.py</title>
+<meta name="Generator" content="htmlizer/[twisted, version 11.1.0]" />
+<link rel="alternate" href="probleme71.py" type="text/x-python" />
+
+</head>
+<body>
+<pre><span class="py-src-variable">m</span>=<span class="py-src-number">10</span>**<span class="py-src-number">6</span>
+
+
+<span class="py-src-variable">but</span>=[<span class="py-src-number">3</span>,<span class="py-src-number">7</span>]
+
+<span class="py-src-comment">#a/b&lt;c/d</span>
+
+<span class="py-src-comment">#a*d&lt;c*b</span>
+
+<span class="py-src-comment">#x*7&lt;3*k</span>
+<span class="py-src-comment">#3*k/7-1</span>
+
+<span class="py-src-variable">gagnant</span>=[<span class="py-src-number">0</span>,<span class="py-src-number">1</span>]
+<span class="py-src-keyword">for</span> <span class="py-src-variable">i</span> <span class="py-src-keyword">in</span> <span class="py-src-variable">range</span>(<span class="py-src-number">0</span>,<span class="py-src-variable">m</span>+<span class="py-src-number">1</span>):
+	<span class="py-src-keyword">if</span> <span class="py-src-keyword">not</span> <span class="py-src-variable">i</span>==<span class="py-src-variable">but</span>[<span class="py-src-number">1</span>]:
+		<span class="py-src-variable">x</span>=(<span class="py-src-variable">but</span>[<span class="py-src-number">0</span>]*<span class="py-src-variable">i</span>)/<span class="py-src-variable">but</span>[<span class="py-src-number">1</span>]
+  <span class="py-src-keyword">if</span>(<span class="py-src-variable">x</span>*<span class="py-src-variable">gagnant</span>[<span class="py-src-number">1</span>]&gt;<span class="py-src-variable">i</span>*<span class="py-src-variable">gagnant</span>[<span class="py-src-number">0</span>]<span class="py-src-keyword">and</span> <span class="py-src-variable">but</span>[<span class="py-src-number">0</span>]*<span class="py-src-variable">i</span>&gt;<span class="py-src-variable">but</span>[<span class="py-src-number">1</span>]*<span class="py-src-variable">x</span>):
+			<span class="py-src-variable">gagnant</span>=[<span class="py-src-variable">x</span>,<span class="py-src-variable">i</span>]
+
+<span class="py-src-keyword">print</span> <span class="py-src-variable">gagnant</span>
+
+</pre>
+</body>

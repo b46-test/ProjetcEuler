@@ -1,0 +1,16 @@
+p=[2,3,5,7,11,13,17,19]
+
+n=[0]*len(p)
+actuel=1
+MAX=20
+
+def nombres(actuel,n,k):
+	print actuel
+	for i in range(k+1,len(p)):
+		if(p[i]*actuel<=MAX):
+			nouveau=n
+			nouveau[i]+=1
+			nombres(p[i]*actuel,nouveau,k)
+
+
+print nombres(1,n,-1)
